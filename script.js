@@ -13,7 +13,7 @@ function atualizarTabela(dadosFiltrados) {
   tbody.innerHTML = '';
   dadosFiltrados.forEach(v => {
     const tr = document.createElement('tr');
-    tr.innerHTML = `
+    tr.innerHTML = ` 
       <td>${v.data}</td>
       <td>${v.cliente}</td>
       <td>${v.pais}</td>
