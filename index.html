@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Interativo Avançado</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Dashboard de Vendas Global</h1>
+    <button id="toggle-theme">Alternar Tema</button>
+  </header>
+
+  <section class="filters">
+    <label>Data Início: <input type="date" id="startDate" /></label>
+    <label>Data Fim: <input type="date" id="endDate" /></label>
+    <button id="filterBtn">Aplicar Filtro</button>
+  </section>
+
+  <section class="kpis">
+    <div class="kpi">Total de Vendas: <strong>R$ 125.400</strong></div>
+    <div class="kpi">Clientes Ativos: <strong>1.230</strong></div>
+    <div class="kpi">Média por Pedido: <strong>R$ 248</strong></div>
+    <div class="kpi">Taxa de Conversão: <strong>3.5%</strong></div>
+  </section>
+
+  <section class="dashboard">
+    <div class="card">
+      <h2>Vendas por País</h2>
+      <canvas id="barChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Status dos Pedidos</h2>
+      <canvas id="doughnutChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Lucro por Categoria</h2>
+      <canvas id="lineChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Desempenho por Equipe</h2>
+      <canvas id="radarChart"></canvas>
+    </div>
+  </section>
+
+  <section class="table-section">
+    <h2>Últimas Vendas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Cliente</th>
+          <th>País</th>
+          <th>Valor</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- preenchido via JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
